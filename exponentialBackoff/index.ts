@@ -3,7 +3,7 @@
  * @param func Function to be retried over and over again (until it succeeds)
  * 		- The function should return a promise
  * 		- If the promise is rejected, it will be retried
- * 		- It must be idempotent
+ * 		- It must be idempotent - call it many times with the same arguments and the result won’t change beyond initial calling
  * 		- The function must not be handling the error internally. It must throw the error
  *
  * @param firstRetryAfterMs Time after the first retry (default: 500ms)
